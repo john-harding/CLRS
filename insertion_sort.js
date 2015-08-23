@@ -3,6 +3,8 @@
 
 var arr = [53,26,8,3,44,31,78,99,235,12,45,72,18,39,61,68,489,5319,75];
 
+var sorted = [3,8,12,18,26,31,39,44,45,53,61,68,72,75,78,99,235,489,5319];
+
 function insertion_sort(A)
 {
 	var temp;
@@ -23,3 +25,23 @@ function insertion_sort(A)
 }
 
 insertion_sort(arr);
+
+
+console.log(compare_arrays(arr,sorted));
+
+
+function compare_arrays(arr1, arr2) // compare the two arrays for equality
+{
+	if(arr1.length != arr2.length)
+	{
+		return false;
+	}
+	for(var i = 0; i < arr1.length; i++)
+	{
+		if(arr1[i] !== arr2[i])
+		{
+			return false;
+		}
+	}
+	return true;
+}
